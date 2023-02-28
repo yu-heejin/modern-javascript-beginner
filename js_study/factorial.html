@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>팩토리얼 계산</title>
+    </head>
+    <body>
+        <script>
+            function fact(n) {
+                if (n <= 1) return n;
+                return n * fact(n-1);
+            }
+
+            for (var i=1; i<10; i++) {
+                // console.log(i + "! = " + fact(i));
+                // document.write를 이용하면 출력 결과를 웹 페이지 창 안에서 확인 가능하다.
+                // 소괄호 안에 든 값을 body 요소에 출력한다.
+                // 실무에서는 잘 안 쓰인다고 한다.
+                document.write(i + "! = " + fact(i) + "<br/>");
+            }
+        </script>
+        <!-- 
+            HTML, CSS 스타일을 제어하지 않는 순수 자바스크립트 프로그램을 실행시킬 땐
+            script 요소를 body 요소에 배치하는 편이 좋다.
+
+            반대로 자바스크립트로 위와 같은 요소를 제어할 땐
+            script 요소를 head 요소의 자식 요소로 배치한다.
+            이는 자바스크립트 프로그램과 html 문서를 분리하기 위해서이다.
+        -->
+    </body>
+</html>
